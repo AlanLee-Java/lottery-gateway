@@ -1,0 +1,25 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: lottery-gateway
+  profiles:
+    active: test
+  cloud:
+    nacos:
+      config:
+        namespace: ${nacos.namespace}
+        server-addr: ${nacos.server-addr}
+        file-extension: yaml
+        ext-config:
+          - data-id: application.yaml
+            refresh: true
+      discovery:
+        namespace: ${nacos.namespace}
+        server-addr: ${nacos.server-addr}
+        metadata:
+          group: main
+          version: 1.0
+nacos:
+  namespace: 3462db19-8fc0-4cd3-8f13-39b1694004b3
+  server-addr: 172.31.74.114:8848

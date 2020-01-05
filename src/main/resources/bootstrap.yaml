@@ -1,0 +1,18 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: 47.244.39.127:8848
+        file-extension: yaml
+        namespace: c45f8b42-5e34-4db1-b5c6-2478f7d5c742
+        ext-config:
+          - data-id: application.yaml
+      discovery:
+        server-addr: 47.244.39.127:8848
+        namespace: c45f8b42-5e34-4db1-b5c6-2478f7d5c742
