@@ -2,17 +2,17 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: gateway
+    name: lottery-gateway
   profiles:
     active: dev
   cloud:
     nacos:
       config:
-        server-addr: 47.244.39.127:8848
+        server-addr: 192.168.0.103:8848
         file-extension: yaml
-        namespace: c45f8b42-5e34-4db1-b5c6-2478f7d5c742
+        namespace: 8574114b-3591-4962-9408-e5aec0a15244
         ext-config:
           - data-id: application.yaml
       discovery:
-        server-addr: 47.244.39.127:8848
-        namespace: c45f8b42-5e34-4db1-b5c6-2478f7d5c742
+        server-addr: 192.168.0.103:8848
+        namespace: 8574114b-3591-4962-9408-e5aec0a15244
